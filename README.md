@@ -1,4 +1,20 @@
-# docs-react
+<h1 align="center">docs-react</h1>
+
+<p align="center">
+  <strong>JSON-driven React documentation viewer. Drop JSON files in /public/sections/, get nested navigation, markdown rendering, syntax-highlighted code, tables, and dark/light themes for free.</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Working-brightgreen" alt="Status" />
+  <img src="https://img.shields.io/badge/React-149ECA?logo=react&logoColor=111111" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Markdown-Rendered-000?logo=markdown&logoColor=white" alt="Markdown" />
+  <img src="https://img.shields.io/badge/License-MIT-blue" alt="License" />
+</p>
+
+---
+
+## What this is
 
 docs-react is a **React-based documentation viewer** that dynamically loads structured documentation from **JSON files** instead of static HTML. It features **nested navigation**, **syntax highlighting**, **markdown support**, **tables**, **code snippets**, and **theme persistence** with **dark/light mode**.
 
@@ -7,19 +23,19 @@ docs-react is a **React-based documentation viewer** that dynamically loads stru
 # Live Demo
 
 🚀 **Check out the project in action:**  
-🔗 [Live Demo](https://hector-oviedo.github.io/docs-react/)
+🔗 [Live Demo](https://hec-ovi.github.io/docs-react/)
 
 
 ---
 
 ## 🌟 Features
-- 📄 **JSON-Based Documentation** – Easily generate structured docs via JSON.
-- 🔍 **Dynamic Menu** – Supports nested sections and expandable groups.
-- 🎨 **Dark/Light Mode** – Theme toggles with persistent user settings.
-- 📝 **Markdown Support** – Render rich text, code, and tables.
-- 💾 **LocalStorage Persistence** – Remembers selected themes and sections.
-- 📜 **Error Handling** – Prevents crashes from malformed JSON.
-- ⚡ **Built with Vite** – Fast and optimized frontend.
+- 📄 **JSON-Based Documentation**, Easily generate structured docs via JSON.
+- 🔍 **Dynamic Menu**, Supports nested sections and expandable groups.
+- 🎨 **Dark/Light Mode**, Theme toggles with persistent user settings.
+- 📝 **Markdown Support**, Render rich text, code, and tables.
+- 💾 **LocalStorage Persistence**, Remembers selected themes and sections.
+- 📜 **Error Handling**, Prevents crashes from malformed JSON.
+- ⚡ **Built with Vite**, Fast and optimized frontend.
 
 ---
 
@@ -28,7 +44,7 @@ docs-react is a **React-based documentation viewer** that dynamically loads stru
 ### **1️⃣ Clone the Repository**
 
 ```bash
-git clone https://github.com/hector-oviedo/docs-react.git cd docs-react
+git clone https://github.com/hec-ovi/docs-react.git && cd docs-react
 ```
 
 ### **2️⃣ Install Dependencies**
@@ -252,10 +268,13 @@ This format ensures structured, AI-friendly documentation generation.
 ![Screenshot](screenshot.png)
 
 ## 📝 Known Issues & Limitations
-- Cannot Open 'index.html' Directly – Use a local server (see CORS section).
+- Cannot Open 'index.html' Directly, Use a local server (see CORS section).
 
 ## 📜 License
-This project is open-source under the MIT License.
+
+[MIT](LICENSE) for original code in this repository (React + Vite source under src/, helper scripts). Third-party libraries pulled at runtime (React, Vite, the markdown / syntax-highlighting renderers) retain their own upstream licenses; this repository does not redistribute them. Sample JSON content under public/ is illustrative only.
+
+---
 
 # 🔗 Related Projects
-[docs](https://github.com/hector-oviedo/docs) (original non-React version)
+[docs](https://github.com/hec-ovi/docs) (original non-React version)
