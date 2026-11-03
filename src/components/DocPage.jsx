@@ -61,8 +61,20 @@ export function DocPage({ entry, labels, anchor, onOutline }) {
 
   useEffect(() => {
     if (!state.doc) return;
-    if (anchor) document.getElementById(anchor)?.scrollIntoView({ block: "start" });
-    else window.scrollTo(0, 0);
+    if (!anchor) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    // The body renders in a lazy chunk: wait a few frames for the heading to exist.
+    let frame = 0;
+    let raf = 0;
+    const seek = () => {
+      const el = document.getElementById(anchor);
+      if (el) el.scrollIntoView({ block: "start" });
+      else if (frame++ < 60) raf = requestAnimationFrame(seek);
+    };
+    seek();
+    return () => cancelAnimationFrame(raf);
   }, [state.doc, anchor]);
 
   const copy = () => state.doc && navigator.clipboard?.writeText(state.doc.text);
