@@ -13,7 +13,7 @@ when the index was built.
 One line per doc in navigation order:
 
 ```text
-rules/script-writing · Script writing rules · [rules, script] · How every line is written and what never goes in one.
+guide/writing-docs · Writing docs · [guide] · The front matter every doc carries, how topics build the navigation, and links between docs.
 ```
 
 With a topic, only docs carrying that topic or a sub-topic of it (`reference` matches `reference/api`).
