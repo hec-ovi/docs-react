@@ -82,9 +82,11 @@ export function DocPage({ entry, labels, anchor, onOutline }) {
         {entry.topics.slice(1).map((t) => (
           <Chip key={t} size="small" variant="outlined" label={t} />
         ))}
-        {entry.tags.map((t) => (
-          <Chip key={t} size="small" label={t} />
-        ))}
+        {entry.tags
+          .filter((t) => !entry.topics.some((topic) => topic.split("/").includes(t)))
+          .map((t) => (
+            <Chip key={t} size="small" label={t} />
+          ))}
         <Typography variant="caption" color="text.secondary" sx={{ ml: "auto" }}>
           {entry.updated} · {entry.words} words ·{" "}
           <Link href={CONTENT + entry.path} target="_blank" rel="noreferrer" color="inherit">
