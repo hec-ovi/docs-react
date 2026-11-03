@@ -44,4 +44,4 @@ docs bundle guide agents -o guide-bundle.md
 - `index.json`: the navigation tree and one record per doc (id, path, title, topics, tags, summary, updated, words). The viewer loads it once.
 - `INDEX.md`: the same list as Markdown, one line per doc, grouped by topic, for agents that read files instead of running the CLI.
 
-It also warns about docs without a title, topics or summary, duplicate file names, email addresses and home-directory paths.
+It also warns about docs without a title, topics or summary, broken links between docs, email addresses and home-directory paths.
