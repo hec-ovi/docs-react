@@ -44,7 +44,7 @@ index. Refuses to overwrite unless `--force`.
 
 Rebuilds `index.json` (navigation tree and one record per doc, read by the viewer) and `INDEX.md`
 (one line per doc grouped by topic, for agents). Prints warnings: missing title, topics or summary,
-summary over 200 characters, duplicate file names, email addresses, home-directory paths.
+summary over 200 characters, broken links between docs, email addresses, home-directory paths.
 
 ## bundle <topic|id...> [-o FILE] [--title "..."]
 

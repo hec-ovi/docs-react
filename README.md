@@ -128,7 +128,7 @@ Node 18 or newer, standard library only. Plain-text output sized for agents; err
 | `docs search <words...>` | Docs holding all the words, ranked, with the matching line |
 | `docs get <id\|path\|slug>` | Print a doc (`--body` drops the front matter) |
 | `docs new <topic> <title>` | Create a doc with front matter (`--tags`, `--summary`, `--stdin` for the body) |
-| `docs index` | Rebuild `index.json` and `INDEX.md`; warn about missing fields, emails and home-directory paths |
+| `docs index` | Rebuild `index.json` and `INDEX.md`; warn about missing fields, broken links, emails and home-directory paths |
 | `docs bundle <topic\|id...> -o out.md` | Join topics into one Markdown file and print its size in words and tokens |
 
 ```text

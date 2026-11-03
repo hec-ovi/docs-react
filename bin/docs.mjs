@@ -29,7 +29,7 @@ usage: docs <command> [args] [--root DIR]
   get <id|path|slug> [--body]       print a doc (--body: without front matter)
   new <topic> <title> [options]     create a doc with front matter, print its path
         --tags a,b  --summary "..."  --slug name  --stdin (body from stdin)  --force
-  index                             rebuild index.json and INDEX.md, print warnings
+  index                             rebuild index.json and INDEX.md, warn about broken links and private data
   bundle <topic|id...> [-o FILE]    join docs into one Markdown file (for a web chat), stdout by default
         --title "..."
 
