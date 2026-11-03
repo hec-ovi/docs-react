@@ -1,0 +1,5 @@
+{
+  "title": "docs-react",
+  "topicOrder": ["guide", "agents", "reference"],
+  "topicLabels": { "reference/api": "Example API" }
+}
