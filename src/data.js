@@ -4,10 +4,20 @@ import { parseFrontMatter, slugify, topicLabel } from "../lib/frontmatter.mjs";
 export const CONTENT = "./content/";
 const docCache = new Map();
 
-export async function fetchIndex() {
+async function loadIndex() {
   const res = await fetch(`${CONTENT}index.json`, { cache: "no-cache" });
   if (!res.ok) throw new Error(`index.json: HTTP ${res.status}`);
   return res.json();
+}
+
+// Start the index request while React boots; later reloads fetch again.
+let early = loadIndex();
+early.catch(() => {});
+
+export function fetchIndex() {
+  const p = early || loadIndex();
+  early = null;
+  return p;
 }
 
 export async function fetchDoc(path) {

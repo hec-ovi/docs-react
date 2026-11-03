@@ -17,7 +17,7 @@ const TYPES = {
 };
 
 /** Serve the library at ./content/ in dev, keep its index fresh, and copy it into the build. */
-function docsLibrary(root) {
+function docsLibrary(root, { publicBuild = false } = {}) {
   let outDir = "dist";
   let timer = null;
   const reindex = () => {
@@ -61,6 +61,11 @@ function docsLibrary(root) {
         filter: (src) => !path.basename(src).startsWith("."),
       });
       console.log(`[docs] copied ${count} docs from ${root} to ${path.join(outDir, "content")}`);
+      if (publicBuild) {
+        // A public build ships code only: any bundled .json or .md asset could be a private library file.
+        const leaked = fs.readdirSync(path.join(outDir, "assets")).filter((f) => /\.(json|md)$/i.test(f));
+        if (leaked.length) throw new Error(`[docs] public build bundled data files: ${leaked.join(", ")}`);
+      }
     },
   };
 }
@@ -72,7 +77,7 @@ export default defineConfig(({ mode }) => {
   const pages = mode === "pages";
   const root = pages ? EXAMPLE_ROOT : process.env.DOCS_ROOT ? resolveRoot() : fs.existsSync(DEFAULT_ROOT) ? DEFAULT_ROOT : EXAMPLE_ROOT;
   return {
-    plugins: [react(), docsLibrary(root)],
+    plugins: [react(), docsLibrary(root, { publicBuild: pages })],
     base: "./",
     build: {
       outDir: pages ? "docs" : "dist",
