@@ -1,0 +1,25 @@
+{
+  "name": "docs-react",
+  "owner": {
+    "name": "Hector Oviedo",
+    "url": "https://github.com/hec-ovi"
+  },
+  "metadata": {
+    "description": "Markdown documentation library for people and coding agents: a React viewer, a stdlib-only docs CLI and a portable skill for Claude Code, Codex, Gemini CLI and Grok.",
+    "version": "0.2.0"
+  },
+  "plugins": [
+    {
+      "name": "docs-react",
+      "source": "./plugins/docs-react",
+      "description": "Agents read and write a folder of Markdown docs through the docs CLI: list by topic, search, get, create with front matter, rebuild the index and bundle topics into one file for a web chat. Node stdlib, no MCP.",
+      "version": "0.2.0",
+      "author": { "name": "Hector Oviedo", "url": "https://github.com/hec-ovi" },
+      "homepage": "https://github.com/hec-ovi/docs-react",
+      "repository": "https://github.com/hec-ovi/docs-react",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["documentation", "markdown", "knowledge-base", "agent-skills", "cli", "react"]
+    }
+  ]
+}

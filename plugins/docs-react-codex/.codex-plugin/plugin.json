@@ -1,0 +1,23 @@
+{
+  "name": "docs-react-codex",
+  "version": "0.2.0",
+  "description": "Read and write the project's Markdown docs through the docs CLI: list, search, get, new, index and bundle. Node stdlib, no MCP.",
+  "author": { "name": "Hector Oviedo", "url": "https://github.com/hec-ovi" },
+  "homepage": "https://github.com/hec-ovi/docs-react",
+  "repository": "https://github.com/hec-ovi/docs-react",
+  "license": "MIT",
+  "keywords": ["documentation", "markdown", "knowledge-base", "agent-skills"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "docs-react",
+    "shortDescription": "Markdown docs library for people and agents",
+    "longDescription": "Find, read, write and bundle the project's Markdown docs through the docs CLI; the same folder renders in the docs-react viewer.",
+    "developerName": "Hector Oviedo",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/hec-ovi/docs-react",
+    "defaultPrompt": ["Use /docs search <words> to find what the docs say.", "Use /docs new <topic> <title> to save a new doc."],
+    "screenshots": [],
+    "brandColor": "#555555"
+  }
+}

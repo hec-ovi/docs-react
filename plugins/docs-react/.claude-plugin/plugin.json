@@ -1,0 +1,11 @@
+{
+  "name": "docs-react",
+  "displayName": "docs-react",
+  "version": "0.2.0",
+  "description": "Agents read and write a folder of Markdown docs through the docs CLI: list by topic, search, get, create with front matter, rebuild the index and bundle topics into one file for a web chat. Node stdlib, no MCP.",
+  "author": { "name": "Hector Oviedo", "url": "https://github.com/hec-ovi" },
+  "homepage": "https://github.com/hec-ovi/docs-react",
+  "repository": "https://github.com/hec-ovi/docs-react",
+  "license": "MIT",
+  "keywords": ["documentation", "markdown", "knowledge-base", "agent-skills", "cli"]
+}
