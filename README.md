@@ -110,7 +110,7 @@ A short lead paragraph, then sections.
 | `updated` | no | A date; defaults to the file's modification day |
 | `order` | no | Sorts docs inside a topic |
 
-Relative links between docs (`[sessions](sessions.md)`) and relative images work in the viewer and on GitHub alike. An optional `docs.config.json` at the library root sets the title, the order of top-level topics and display labels:
+Relative links between docs (`[sessions](sessions.md)`) and relative images work in the viewer and on GitHub alike. `INDEX.md` and a `README.md` at the library root are not docs and stay out of the index. An optional `docs.config.json` at the library root sets the title, the order of top-level topics and display labels:
 
 ```json
 { "title": "Team docs", "topicOrder": ["guide", "agents", "reference"], "topicLabels": { "reference/api": "API" } }
