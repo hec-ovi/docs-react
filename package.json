@@ -1,25 +1,27 @@
 {
-  "name": "docs",
+  "name": "docs-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:pages": "vite build --mode pages",
+    "preview": "vite preview",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "docs": "node bin/docs.mjs",
+    "sync:skill": "node scripts/sync-skill-copies.mjs"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.3",
     "@mui/material": "^6.4.3",
-    "axios": "^1.7.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.4.0",
     "react-markdown": "^9.0.3",
-    "react-syntax-highlighter": "^15.6.1"
+    "react-syntax-highlighter": "^15.6.1",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
@@ -32,5 +34,13 @@
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
     "vite": "^6.0.5"
+  },
+  "description": "Markdown documentation viewer and agent CLI: drop .md files with front matter in a folder, get topic navigation, search, code highlighting, tables, dark and light themes, and an index agents can read.",
+  "license": "MIT",
+  "bin": {
+    "docs": "bin/docs.mjs"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
